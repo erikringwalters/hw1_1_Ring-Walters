@@ -8,12 +8,12 @@
 using namespace std;
 void counter()
 {
-	int temp;
-	int ent[30];
-	int sorted[30];
-	int count[30] = { 0 };
-	int inputVals;
-	int max = -2000000;
+	int temp;//used as a temporary variable in the case that the numbers are not sorted in ascending order.
+	int ent[30];//array of variables that are entered
+	int sorted[30];//ended up not using this array, but i'll keep it around in case i get an idea for it
+	int count[30] = { 0 };//counts the number of repeated numbers. all set to zero because there are currently no numbers entered.
+	int inputVals;//controls how many numbers can be entered.
+	int max = -2000000;//shows highest number. Very low number in case user's highest number is low.
 
 	cout << "How many input values [max: 30]? ";//Asks for user input
 	cin >> inputVals;//Takes user input. This variable controls how many numbers are entered
@@ -55,7 +55,7 @@ void counter()
 		{
 			if (ent[ii] != ent[ii - 1])//Just makes sure there are no repeats
 			{
-				cout << ent[ii] << "         " << count[ii] << endl;
+				cout << ent[ii] << "         " << count[ii] << endl;//displays number and how many times number shows up.
 			}
 		}
 
@@ -67,5 +67,5 @@ void counter()
 }
 void main()
 {
-	counter();
+	counter();//runs function
 }
